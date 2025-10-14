@@ -52,6 +52,21 @@
       animation: rise 8s linear infinite;
     }
 
+    .card-content {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; /* makes it responsive */
+    }
+
+    .card-image {
+      width: 150px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
     @keyframes rise {
       0% {
         transform: translateY(0) rotate(0deg);
@@ -96,6 +111,7 @@
 </head>
 <body>
   <div class="card">
+    <img src="https://github.com/ShinLoc/birthday-website/blob/main/pic1.jpg" alt="pic1" class="card-image" />
     <h1>🎉 Happy 21st Birthday, Shuputeriku sayang! 🎂</h1>
     <p>Wishing you a day filled with love, laughter, and endless joy!
       Hihihihi lamak dah kita bersama sik berasaa dah 3 tahun tuk nyambut birthday sama, lain tahun lain gik cara sambut birthday hshshs
@@ -103,11 +119,7 @@
       Banyakkk manis pahitnyaa yang kita dah lalui sama-sama hmmm, kadang di atas sama sama kadang di debah sama sama kita duak. Kadang menolong sama sama, kadang kelaie sama sama.
       Tapi masih juak kita kuat nak tempuh semuaa masalah yaaa</p>
   </div>
-  
-  <button onclick="document.getElementById('card2').scrollIntoView({ behavior: 'smooth' });">
-    Scroll to Next 💌
-  </button>
-
+  <hr>
   <div class="card">
     <h1> First of all, birthday yayanggg hihihi >.< </h1>
     <p>Selamat ulang tahun yang ke-21 sayanggg, makinnn berusia yaaa banyak banyaklaaa jaga diriii, benarpun makin berusia perempuan dah sik menumbuh gik, abang cadangkan stop gik
