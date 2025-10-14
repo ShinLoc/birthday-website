@@ -107,11 +107,27 @@
         transform: translateY(-10px);
       }
     }
+    
+    .balloon {
+      position: absolute;
+      bottom: 0; /* Start from bottom of the container */
+      width: 80px;
+      height: 100px;
+      border-radius: 50% 50% 45% 45%;
+      animation: rise 8s linear infinite;
+      z-index: 0;
+    }
+
+    #balloon-container {
+      position: relative;
+      height: 0px; /* No extra space added */
+      z-index: 0;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <img src="https://github.com/ShinLoc/birthday-website/main/pic1" alt="pic1" class="card-image" />
+    <img src="https://raw.githubusercontent.com/ShinLoc/birthday-website/main/pic1.jpg" alt="pic1" class="card-image" />
     <h1>🎉 Happy 21st Birthday, Shuputeriku sayang! 🎂</h1>
     <p>Wishing you a day filled with love, laughter, and endless joy!
       Hihihihi lamak dah kita bersama sik berasaa dah 3 tahun tuk nyambut birthday sama, lain tahun lain gik cara sambut birthday hshshs
@@ -133,16 +149,19 @@
     </p>
   </div>
 
+  <div id="balloon-container"></div>
   <!-- Balloons -->
   <script>
-    for (let i = 0; i < 15; i++) {
-      const b = document.createElement("div");
-      b.className = "balloon";
-      b.style.left = Math.random() * 100 + "%";
-      b.style.background = `radial-gradient(circle at 30% 30%, #fff, hsl(${Math.random() * 360}, 80%, 60%))`;
-      b.style.animationDelay = Math.random() * 8 + "s";
-      document.body.appendChild(b);
-    }
-  </script>
+  const container = document.getElementById("balloon-container");
+
+  for (let i = 0; i < 15; i++) {
+    const b = document.createElement("div");
+    b.className = "balloon";
+    b.style.left = Math.random() * 100 + "%";
+    b.style.background = `radial-gradient(circle at 30% 30%, #fff, hsl(${Math.random() * 360}, 80%, 60%))`;
+    b.style.animationDelay = Math.random() * 8 + "s";
+    container.appendChild(b);
+  }
+</script>
 </body>
 </html>
