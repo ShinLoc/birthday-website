@@ -66,9 +66,9 @@
     .card-content {
       display: flex;
       gap: 20px;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
-      flex-wrap: wrap; /* makes it responsive */
+      flex-wrap: wrap; /* good for responsiveness */
     }
 
     .card-image {
@@ -122,13 +122,14 @@
 </head>
 <body>
   <div class="card">
-    <img src="pic1" alt="Birthday Image" />
     <h1>🎉 Happy 21st Birthday, Shuputeriku sayang! 🎂</h1>
     <p>Wishing you a day filled with love, laughter, and endless joy!
       Hihihihi lamak dah kita bersama sik berasaa dah 3 tahun tuk nyambut birthday sama, lain tahun lain gik cara sambut birthday hshshs
       Wish kalituk abang rasaa sedih juakk, sama jak macam tahun tahun lepasss rasa sedih ngan happy dalam masa yang samaa sebab masih bertahan relationship ngan yayang.
       Banyakkk manis pahitnyaa yang kita dah lalui sama-sama hmmm, kadang di atas sama sama kadang di debah sama sama kita duak. Kadang menolong sama sama, kadang kelaie sama sama.
-      Tapi masih juak kita kuat nak tempuh semuaa masalah yaaa</p>
+      Tapi masih juak kita kuat nak tempuh semuaa masalah yaaa
+    </p>
+    <img src="pic1.jpg" alt="pic1" class="card-image"/>
   </div>
   <hr>
   <div class="card">
@@ -142,6 +143,7 @@
       tanggungjawab abangg effort abangg sebagai bakal suami yayanggg, abang mok buktikan yangg yayangg sik salah pilih pasangan, ada masanya mungkin abang polah salahhh and abang
       mintak maaf pasal yaa sebab abangg sik sengajaa juakk polahh salahh
     </p>
+    <img src="pic2.jpg" alt="pic2" class="card-image"/>
   </div>
 
   <div id="balloon-container"></div>
