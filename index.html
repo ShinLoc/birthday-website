@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unlock Love 🌻</title>
+  <title>Happy Birthday Sayang 🌻</title>
   <style>
     body {
       background: linear-gradient(135deg, #ff8fb1, #ffdde1);
@@ -72,11 +72,22 @@
     }
 
     .card-image {
-      width: 300px;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
+  display: flex;
+  justify-content: center;   /* centers them horizontally */
+  align-items: center;       /* vertically align if heights differ */
+  flex-wrap: wrap;           /* ✅ makes them wrap on small screens */
+  gap: 10px;                 /* space between pictures */
+}
+
+.card-image img {
+  width: 150px;              /* adjust size */
+  border-radius: 10px;       /* optional: rounded corners */
+  transition: transform 0.3s ease; /* optional hover effect */
+}
+
+.card-image img:hover {
+  transform: scale(1.05);    /* small zoom on hover */
+}
 
     @keyframes rise {
       0% {
@@ -238,6 +249,7 @@
       from { transform: rotate(var(--angle)); }
       to { transform: rotate(calc(var(--angle) + 360deg)); }
     }
+
   </style>
 </head>
 <body>
@@ -272,7 +284,8 @@
       Banyakkk manis pahitnyaa yang kita dah lalui sama-sama hmmm, kadang di atas sama sama kadang di debah sama sama kita duak. Kadang menolong sama sama, kadang kelaie sama sama.
       Tapi masih juak kita kuat nak tempuh semuaa masalah yaaa
     </p>
-    <img src="pictogether2.jpg" alt="pic1" class="card-image"/>
+    <img src="first met.jpg" alt="pic1" class="card-image"/>
+    <img src="first outing kuching.jpg" alt="pic2" class="card-image"/>
   </div>
   <hr>
   <div class="card">
@@ -286,7 +299,11 @@
       tanggungjawab abangg effort abangg sebagai bakal suami yayanggg, abang mok buktikan yangg yayangg sik salah pilih pasangan, ada masanya mungkin abang polah salahhh and abang
       mintak maaf pasal yaa sebab abangg sik sengajaa juakk polahh salahh
     </p>
-    <img src="pictogether3.jpg" alt="pic2" class="card-image"/>
+    <img src="pictogether2.jpg" alt="pic3" class="card-image"/>
+    <img src="pictogether3.jpg" alt="pic4" class="card-image"/>
+    <img src="pictogether4.jpg" alt="pic5" class="card-image"/>
+    <img src="pictogether5.jpg" alt="pic6" class="card-image"/>
+    <img src="pictogether6.jpg" alt="pic7" class="card-image"/>
   </div>
   <hr>
   <div>
@@ -296,6 +313,22 @@
   </div>
   <hr>
   <hr>
+
+  <div id="balloon-container"></div>
+  <!-- Balloons -->
+  <script>
+  const container = document.getElementById("balloon-container");
+
+  for (let i = 0; i < 30; i++) {
+    const b = document.createElement("div");
+    b.className = "balloon";
+    b.style.left = `calc(${Math.random() * 100}% - 40px)`;  // spread across full width
+    b.style.bottom = `${Math.random() * 50}px`;             // slight vertical variation
+    b.style.background = `radial-gradient(circle at 30% 30%, #fff, hsl(${Math.random() * 360}, 80%, 60%))`;
+    b.style.animationDelay = Math.random() * 8 + "s";
+    container.appendChild(b);
+  }
+</script>
 
   <script>
     const startBtn = document.getElementById("start-btn");
